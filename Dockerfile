@@ -12,3 +12,8 @@ RUN wget http://files.magerun.net/n98-magerun-latest.phar -O n98-magerun.phar \
 # Install mysql-client (required by n98-magerun db commands)
 RUN apt-get update \
     && apt-get install -y mysql-client
+
+# Install Memcached PHP extension (useful for Magento cache & session storage)
+RUN apt-get install -y libmemcached-dev \
+    && pecl install memcached \
+    && docker-php-ext-enable memcached

@@ -9,6 +9,7 @@ Features
 * Based on [webgriffe/php-apache-base](https://hub.docker.com/r/webgriffe/php-apache-base/) Docker image. Look at its README for more info.
 * [n98-magerun.phar](https://github.com/netz98/n98-magerun) installed globally at `/usr/local/bin/composer`
 * MySQL CLI client installed because is required by n98-magerun db commands
+* [Memcached](http://php.net/manual/en/book.memcached.php) PHP extension installed and enabled (useful for Magento cache & session storage)
 
 Usage
 -----
