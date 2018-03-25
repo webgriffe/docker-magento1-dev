@@ -1,4 +1,4 @@
-FROM webgriffe/php-apache-base:5.5
+FROM webgriffe/php-apache-base:5.6
 MAINTAINER Webgriffe Srl <support@webgriffe.com>
 
 # Install n98-magerun
@@ -15,5 +15,5 @@ RUN apt-get update \
 
 # Install Memcached PHP extension (useful for Magento cache & session storage)
 RUN apt-get install -y libmemcached-dev \
-    && pecl install memcached \
+    && pecl install memcached-2.2.0 \
     && docker-php-ext-enable memcached
