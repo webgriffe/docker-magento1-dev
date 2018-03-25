@@ -1,4 +1,4 @@
-FROM webgriffe/php-apache-base:5.5
+FROM webgriffe/php-apache-base:7.0
 MAINTAINER Webgriffe Srl <support@webgriffe.com>
 
 # Install n98-magerun
